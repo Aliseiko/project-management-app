@@ -1,0 +1,109 @@
+@import '../../styles/constants';
+@import '../../styles/mixins';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  @include big-tablet {
+    gap: 1.56vw;
+  }
+
+  @include small-tablet {
+    gap: 9px;
+  }
+}
+
+.loading {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  @include big-tablet {
+    gap: 1.56vw;
+  }
+
+  @include small-tablet {
+    gap: 9px;
+  }
+}
+
+.btn {
+  width: 40%;
+
+  @include big-tablet {
+    padding-top: 1.041vw;
+    padding-bottom: 1.041vw;
+  }
+
+  @media (max-width: 770px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  @include small-tablet {
+    width: 127px;
+  }
+}
+
+.authBtn {
+  width: 136px;
+
+  @include big-tablet {
+    padding-top: 1.041vw;
+    padding-bottom: 1.041vw;
+  }
+
+  @media (max-width: 770px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.formButtons {
+  display: grid;
+  grid-template-columns: [col-one] 1fr 1fr;
+  gap: 10px;
+}
+
+.formBtn {
+  width: 200px;
+  padding-right: 8px;
+  padding-left: 8px;;
+
+  @include big-tablet {
+    width: 20.83vw;
+    min-width: 175px;
+    padding-top: 1.041vw;
+    padding-bottom: 1.041vw;
+  }
+
+  @media (max-width: 770px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  @media (max-width: 500px) {
+    min-width: 0;
+    width: 100%;
+  }
+
+  &:nth-child(2n + 1) {
+    justify-self: end;
+  }
+}
+
+.green {
+  color: #008000;
+}

@@ -1,0 +1,55 @@
+/*Fonts*/
+$font: 'Roboto', sans-serif;
+$font-size: 14px;
+$line-height: 16px;
+
+/* Colors */
+$main-text: #000;
+$text: #b6b6b6;
+$primary: #6c5dd3;
+$hover-primary: #4c37d6;
+$lavender: #e3defe;
+$main-background: #f9f8f8;
+$background: #fff;
+
+$hover-footer-icon: #000;
+$red: #f14a5b;
+$pink: #e391ea;
+
+$accent: rgba(100, 203, 244, 0.2);
+$accent-text: #64cbf4;
+
+$loader-box-shadow: rgba(108, 93, 211, 0.7);
+$loader-box-shadow-after: #6c5dd3;
+
+$footer-icon: #b6b6b6;
+
+$overlay: rgba(255, 255, 255, 0.9);
+
+$cancel-background: #e3defe;
+$btn-text: #fff;
+
+$scrollbar-track: rgba(108, 93, 211, 0.1);
+
+$switcher-tumbler: #fff;
+$switcher-background: #e3defe;
+
+$header-background: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0.4));
+
+$edit-input: rgba(182, 182, 182, 0.2);
+$box-shadow: rgba(108, 93, 211, 0.5);
+
+/* Scroll */
+$scroll-width: 5px;
+$scroll-height: 8px;
+
+/* Break points */
+$big-desktop: 1920px;
+$middle-desktop: 1440px;
+$small-desktop: 1280px;
+
+$big-tablet: 960px;
+$small-tablet: 767px;
+
+$middle-mobile: 480px;
+$mobile: 320px;

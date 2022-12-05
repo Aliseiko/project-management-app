@@ -1,0 +1,78 @@
+@import '../../styles/mixins';
+@import '../../styles/constants';
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include common-container;
+  height: 100%;
+}
+
+.frame {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 440px;
+  padding: 20px;
+  gap: 15px;
+
+  background-color: $background;
+  border-radius: 20px;
+  box-shadow: 0 0 30px $box-shadow;
+
+  @include big-tablet {
+    padding: 2.08vw;
+
+    border-radius: 2.08vw;
+    box-shadow: 0 0 3.12vw $box-shadow;
+  }
+
+  @include small-tablet {
+    gap: 10px;
+    box-shadow: 0 0 20px $box-shadow;
+  }
+
+  @media (max-width: 500px) {
+    width: 85%;
+  }
+
+  @include middle-mobile {
+    padding: 10px;
+
+    border-radius: 10px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.forms {
+  width: 100%;
+}
+
+.button {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: #111111;
+  border: 0;
+  background: transparent;
+  transition: 0.3s;
+
+  @include small-tablet {
+    font-size: 18px;
+  }
+}
+
+.deactivated {
+  opacity: 0.25;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

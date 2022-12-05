@@ -1,0 +1,46 @@
+@import '../../styles/constants';
+@import '../../styles/mixins';
+
+.container {
+  @include common-container;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+  padding-bottom: 10px;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.title {
+  color: $primary;
+  overflow-wrap: anywhere;
+}
+
+.allBoards {
+  width: max-content;
+  border: none;
+  background-color: transparent;
+  text-align: start;
+  cursor: pointer;
+  transition: 0.25s;
+
+  &:hover {
+    color: $primary;
+  }
+}

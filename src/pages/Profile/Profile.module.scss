@@ -1,0 +1,77 @@
+@import '../../styles/mixins';
+@import '../../styles/constants';
+
+.page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.profileTitle {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+
+  @include small-tablet {
+    font-size: 24px;
+  }
+}
+
+.frame {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  gap: 25px;
+
+  background-color: $background;
+  border-radius: 20px;
+  box-shadow: 0 0 30px $box-shadow;
+
+  @include big-tablet {
+    padding: 2.08vw;
+
+    border-radius: 2.08vw;
+    box-shadow: 0 0 3.12vw $box-shadow;
+  }
+
+  @include small-tablet {
+    gap: 10px;
+    box-shadow: 0 0 20px $box-shadow;
+  }
+
+  @media (max-width: 500px) {
+    width: 85%;
+  }
+
+  @include middle-mobile {
+    padding: 10px;
+
+    border-radius: 10px;
+  }
+}
+
+.form {
+  width: 100%;
+}
+
+.formTitle {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+
+  @include big-tablet {
+    margin-bottom: 1.56vw;
+    font-size: 2.083vw;
+  }
+
+  @media (max-width: 865px) {
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+}

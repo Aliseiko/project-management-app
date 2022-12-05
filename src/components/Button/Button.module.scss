@@ -1,0 +1,170 @@
+@import '../../styles/constants';
+@import '../../styles/mixins';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 15px;
+
+  font-size: 16px;
+  
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.close {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  @include big-tablet {
+    min-width: 22px;
+    min-height: 22px;
+    width: 3.12vw;
+    height: 3.12vw;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 116%;
+    height: 11%;
+
+    background: $text;
+    border-radius: 3.44rem;
+
+    transition: 0.5s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background: $primary;
+  }
+}
+
+.confirm,
+.cancel {
+  width: 160px;
+  padding-left: 0;
+  padding-right: 0;
+
+  font-weight: 500;
+
+  @include big-tablet {
+    font-size: 1.666vw;
+  }
+
+  @media (max-width: 841px) {
+    font-size: 14px;
+  }
+}
+
+.cancel {
+  color: $primary;
+
+  background-color: $cancel-background;
+  border: 2px solid $cancel-background;
+
+  &:hover {
+    color: $hover-primary;
+
+    background-color: transparent;
+    border-color: $hover-primary;
+  }
+}
+
+.confirm {
+  color: $btn-text;
+
+  background-color: $primary;
+  border: 2px solid $primary;
+
+  &:hover {
+    background-color: $hover-primary;
+    border: 2px solid $hover-primary;
+  }
+}
+
+.boardBtn {
+  justify-content: center;
+  padding: 10px;
+  border-style: solid;
+  border-width: 0.1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  @include button($primary, $background);
+}
+
+.delete {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url('../../assets/img/delete.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: invert(87%) sepia(0%) saturate(38%) hue-rotate(175deg) brightness(88%) contrast(81%);
+  &:hover {
+    filter: invert(41%) sepia(33%) saturate(1775%) hue-rotate(216deg) brightness(87%) contrast(88%);
+  }
+}
+
+.fillBackground {
+  color: $btn-text;
+
+  background-color: $primary; 
+  border: 2px solid $primary;
+
+  &:hover {
+    background-color: $hover-primary;
+    border: 2px solid $hover-primary;
+  }
+}
+
+.wrapperIcon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 16px;
+  max-height: 16px;
+}
+
+
+.deleteBtn, 
+.edit {
+  width: 27px;
+  height: 27px;
+  padding: 3px;
+  border: 2px solid $text;
+  border-radius: 5px;
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  & .wrapperIcon {
+    max-width: max-content;
+    min-width: 10px;
+  }
+}

@@ -1,0 +1,68 @@
+@import '../../styles/constants';
+@import '../../styles/mixins';
+
+.teamMemberCard {
+  width: 360px;
+  min-height: 210px;
+  padding: 24px;
+  border-radius: 12px;
+  background: $background;
+  border: 1px solid $cancel-background;
+  transition: 0.5s;
+  cursor: pointer;
+
+  @include middle-mobile {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 12px $box-shadow;
+  }
+
+  &Text {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
+
+    @include middle-mobile {
+      font-size: 14px;
+    }
+  }
+
+  &Line {
+    width: 85px;
+    height: 2px;
+    margin-bottom: 15px;
+    background-image: linear-gradient(
+                    to right,
+                    $primary,
+                    $background
+    );
+  }
+
+  &Block {
+    display: flex;
+    gap: 24px;
+  }
+
+  &Photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  &Name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #000000;
+  }
+
+  &Role {
+    font-size: 14px;
+    line-height: 1.71;
+    color: #97989F;
+  }
+}

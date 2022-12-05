@@ -1,0 +1,57 @@
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+
+.editing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include big-tablet {
+    gap: 3.12vw;
+  }
+
+  @include small-tablet {
+    gap: 23.9px;
+  }
+}
+
+.content {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  @include big-tablet {
+    margin-bottom: 1.56vw;
+    font-size: 2.083vw;
+  }
+
+  @media (max-width: 865px) {
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+}
+
+.btn {
+  width: 40%;
+
+  @include big-tablet {
+    padding-top: 1.041vw;
+    padding-bottom: 1.041vw;
+  }
+
+  @media (max-width: 770px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  @include small-tablet {
+    width: 127px;
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../styles/constants';
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 20rem;
+  gap: 1rem;
+  height: min-content;
+  max-height: 100%;
+  min-width: 17.5rem;
+  padding: 1rem 0;
+  background-color: #f3f0fa;
+  border-radius: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.handle {
+  width: 1.8rem;
+  height: 1.9rem;
+  background-image: url('../../assets/img/handle.png');
+  background-repeat: no-repeat;
+  background-size: 45%;
+  filter: invert(87%) sepia(0%) saturate(38%) hue-rotate(175deg) brightness(88%) contrast(81%);
+  &:hover {
+    filter: invert(41%) sepia(33%) saturate(1775%) hue-rotate(216deg) brightness(87%) contrast(88%);
+  }
+  &:active {
+    filter: invert(41%) sepia(33%) saturate(1775%) hue-rotate(216deg) brightness(87%) contrast(88%);
+  }
+}
+.count {
+  color: $text;
+  font-size: 1.3rem;
+}

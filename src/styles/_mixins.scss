@@ -1,0 +1,91 @@
+@import './constants';
+
+/* Responsive media */
+@mixin big-desktop {
+  @media (max-width: $big-desktop) {
+    @content;
+  }
+}
+
+@mixin middle-desktop {
+  @media (max-width: $middle-desktop) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (max-width: $small-desktop) {
+    @content;
+  }
+}
+
+@mixin big-tablet {
+  @media (max-width: $big-tablet) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (max-width: $small-tablet) {
+    @content;
+  }
+}
+
+@mixin middle-mobile {
+  @media (max-width: $middle-mobile) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin button($color, $second-color) {
+  background-color: $color;
+  border-color: $color;
+  color: $second-color;
+
+  &:hover {
+    background-color: $second-color;
+    color: $color;
+  }
+}
+
+/* Common Container */
+@mixin common-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px;
+
+  @include big-tablet {
+    padding-left: 2.08vw;
+    padding-right: 2.08vw;
+  }
+
+  @include middle-mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Layout */
+@mixin layout {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Checkbox-wrapper */
+@mixin checkbox-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  width: max-content;
+
+  font-size: 20px;
+}

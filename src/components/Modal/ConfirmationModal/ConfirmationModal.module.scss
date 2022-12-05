@@ -1,0 +1,80 @@
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  gap: 25px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include big-tablet {
+    gap: 2.604vw;
+  }
+
+  @include small-tablet {
+    gap: 19px;
+  }
+}
+
+.content {
+  font-size: 18px;
+  word-wrap: break-word;
+  text-align: center;
+
+  @include big-tablet {
+    font-size: 1.875vw;
+  }
+
+  @media (max-width: 854px) {
+    font-size: 16px;
+  }
+}
+
+.attributeValue {
+  color: $primary;
+  font-weight: 500;
+  font-size: 18px;
+
+  @include big-tablet {
+    font-size: 1.875vw;
+  }
+
+  @media (max-width: 854px) {
+    font-size: 16px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  @include big-tablet {
+    gap: 1.56vw;
+  }
+
+  @include small-tablet {
+    gap: 9px;
+  }
+}
+
+.btn {
+  width: 40%;
+
+  @include big-tablet {
+    padding-top: 1.041vw;
+    padding-bottom: 1.041vw;
+  }
+
+  @media (max-width: 770px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  @include small-tablet {
+    width: 127px;
+  }
+}

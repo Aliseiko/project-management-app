@@ -1,0 +1,81 @@
+@import '../../styles/constants';
+@import '../../styles/mixins';
+
+.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.inputWrapper {
+  width: 100%;
+}
+
+.input {
+  height: auto;
+  padding: 3.157% 17.8% 3.157% 4%;
+  background-color: transparent;
+  border: 2px solid $text;
+
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.btn {
+  position: absolute;
+  width: 11.113%;
+  right: 1.5px;
+  height: calc(100% - 4px);
+
+  background: $lavender;
+
+  &:hover {
+    & .icon {
+      fill: $primary;
+    }
+  }
+
+  @media (max-width: 420px) {
+    width: 44px;
+  }
+}
+
+.iconContainer {
+  max-width: 20px;
+  max-height: 20px;
+  min-width: 15px;
+  min-height: 15px;
+}
+
+.clear {
+  position: absolute;
+  right: 13%;
+  max-width: 20px;
+  max-height: 20px;
+
+  &::after,
+  &::before {
+    height: 13%;
+    background-color: $text;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background: $primary;
+  }
+
+  @include big-tablet {
+    min-width: 15px;
+    min-height: 15px;
+    width: 2.08vw;
+    height: 2.08vw;
+  }
+
+  @media (max-width: 420px) {
+    right: 50px;
+  }
+}

@@ -1,0 +1,54 @@
+@import '../../styles/constants';
+
+.icon {
+  display: block;
+  max-width: inherit;
+  max-height: inherit;
+
+  fill: $text;
+
+  &:hover {
+    fill: $primary;
+  }
+
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.iconContacts {
+  border-radius: 5px;
+}
+
+.logo {
+  fill: none;
+  stroke: $primary;
+  stroke-linecap:round;
+  stroke-miterlimit: 10;
+  stroke-width: 32px;
+
+  transition: 0.5s;
+}
+
+.signOut {
+  fill: none;
+  stroke: $text;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5px;
+
+  transition: 0.5s;
+}
+
+.plus {
+  stroke: $btn-text;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.6px;
+
+  transition: 0.5s;
+}
+
+.signUp {
+  stroke-width: 2.2px;
+}
